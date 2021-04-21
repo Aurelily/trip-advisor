@@ -1,0 +1,203 @@
+/*--------------------------
+GLOBAL
+----------------------------*/
+body {
+  font-family: "Trip Sans";
+  /* font-family: "Commissioner", sans-serif; */
+  /* background-color: #f3f3f3; */
+}
+
+.container {
+  width: 1184px;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+h1 {
+  font-family: "Trip Sans";
+  font-weight: 500;
+  color: black;
+  font-size: 54px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+h2 {
+  font-family: "Trip Sans";
+  color: black;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 33px;
+}
+
+h3 {
+  color: black;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+h1 span {
+  color: #fe5d5d;
+}
+
+/*--------------------------
+HEADER
+----------------------------*/
+header {
+  background-color: #fff;
+  height: 60px;
+}
+
+header > div {
+  display: flex;
+  /* background-color: pink; */
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+header img {
+  width: 183px;
+}
+
+.head-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+}
+.head-menu div {
+  /* background-color: #f2f2f2; */
+  border-radius: 22px;
+  padding: 12px;
+}
+.head-menu div i {
+  padding: 0 5px;
+}
+
+.head-menu div:nth-child(4) {
+  color: #fff;
+  background-color: #000;
+}
+
+/*--------------------------
+MAIN
+----------------------------*/
+
+/*------Main menu------*/
+
+.main-menu {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: red; */
+  height: 80px;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.main-menu div {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid black;
+  flex: 1;
+  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main-menu div i {
+  padding: 0 5px;
+}
+
+/*------Pictures------*/
+
+.pictures {
+  display: flex;
+  height: 430px;
+  /* background-color: rgb(139, 139, 189); */
+}
+
+.pictures div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pictures div img {
+  object-fit: cover;
+  height: 214px;
+}
+
+.pictures img {
+  margin: 1px;
+}
+
+/*------Breacrumb------*/
+
+.breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/*------Travel------*/
+
+.travel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+/*------Travel > Infos------*/
+.infos {
+  /* background-color: pink; */
+  padding-right: 200px;
+}
+
+.infos p {
+  font-family: "TripAdvisor_Regular";
+  font-size: 20px;
+  line-height: 23px;
+}
+
+/*------Travel > organization------*/
+.organization {
+  background-color: #fe5d5d;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*--Haut du bloc organization--*/
+
+.top-orga {
+  padding: 30px;
+}
+
+.top-orga p {
+  font-weight: 100;
+}
+
+.bt-create {
+  color: #fff;
+  background-color: #000;
+  border-radius: 22px;
+  margin-top: 30px;
+  height: 55px;
+  width: 150px;
+  text-align: center;
+  line-height: 55px;
+}
+
+/*--Carte en dessous--*/
+
+.bottom-orga {
+  width: 465px;
+  height: 214px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-image: url(../img/image_trips_card_medium.png);
+  background-size: cover;
+}
