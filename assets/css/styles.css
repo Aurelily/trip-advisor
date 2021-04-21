@@ -1,59 +1,75 @@
 /*--------------------------
+ROOT : charte graphique couleurs
+----------------------------*/
+:root {
+  --rose-trip: #fe5d5d;
+  --dark-grey-trip: #534b4b;
+  --light-grey-trip: #f2f2f2;
+  --vert-trip: #35e0a1;
+}
+
+/*--------------------------
 GLOBAL
 ----------------------------*/
 body {
-  font-family: "Trip Sans";
-  /* font-family: "Commissioner", sans-serif; */
-  /* background-color: #f3f3f3; */
+  font-family: "Trip Sans Reg";
+  color: black;
 }
 
 .container {
-  width: 1184px;
+  width: 1140px;
   margin: auto;
   /* border: 1px solid red; */
 }
 
 h1 {
-  font-family: "Trip Sans";
+  font-family: "Trip Sans Med";
   font-weight: 500;
-  color: black;
   font-size: 54px;
-  font-weight: 500;
   margin-top: 20px;
 }
 
 h2 {
-  font-family: "Trip Sans";
-  color: black;
+  font-family: "Trip Sans Med";
   font-size: 28px;
-  font-weight: 500;
   margin-bottom: 20px;
   line-height: 33px;
 }
 
 h3 {
-  color: black;
   font-size: 32px;
-  font-weight: 400;
   margin-bottom: 20px;
   line-height: 40px;
 }
 
+h4 {
+  font-family: "Trip Sans Med";
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 28px;
+}
+h5 {
+  font-family: "Trip Sans Med";
+  font-size: 18px;
+  line-height: 22px;
+}
+
 h1 span {
-  color: #fe5d5d;
+  color: var(--rose-trip);
 }
 
 /*--------------------------
 HEADER
 ----------------------------*/
 header {
-  background-color: #fff;
   height: 60px;
+  background-color: #fff;
+  border: solide 1px var(--dark-grey-trip);
 }
 
 header > div {
   display: flex;
-  /* background-color: pink; */
   justify-content: space-between;
   align-items: center;
   height: 60px;
@@ -62,79 +78,105 @@ header img {
   width: 183px;
 }
 
-.head-menu {
+header nav {
   display: flex;
-  justify-content: space-between;
-  width: 450px;
+  justify-content: space-evenly;
+  width: 500px;
 }
-.head-menu div {
-  /* background-color: #f2f2f2; */
+header nav a {
+  display: flex;
+  justify-content: center;
   border-radius: 22px;
+  align-items: center;
   padding: 12px;
-}
-.head-menu div i {
-  padding: 0 5px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.head-menu div:nth-child(4) {
+header nav a:hover {
+  background-color: var(--light-grey-trip);
+}
+
+header nav a i {
+  padding: 0 10px;
+}
+
+header button {
   color: #fff;
   background-color: #000;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+header button:hover {
+  background-color: var(--dark-grey-trip);
 }
 
 /*--------------------------
 MAIN
 ----------------------------*/
 
-/*------Main menu------*/
+/*------NAV MAIN MENU-----*/
 
 .main-menu {
   display: flex;
-  justify-content: space-evenly;
-  /* background-color: red; */
   height: 80px;
   padding: 10px 0;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .main-menu div {
-  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
   border-radius: 10px;
   border: 1px solid black;
   flex: 1;
   margin: 0 5px;
-  display: flex;
-  justify-content: space-between;
   padding: 20px;
 }
 
-.main-menu div i {
-  padding: 0 5px;
+.main-menu div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
-/*------Pictures------*/
+/*------PICTURES------*/
 
 .pictures {
   display: flex;
   height: 430px;
-  /* background-color: rgb(139, 139, 189); */
 }
 
-.pictures div {
-  display: flex;
-  flex-direction: column;
+.pictures .col-1 {
+  height: 100%;
+  margin-right: 2px;
   flex: 1;
 }
+.pictures .col-2 {
+  height: 100%;
+  width: 480px;
+}
 
-.pictures div img {
+.pictures .col-1 img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  height: 214px;
+}
+.pictures .col-2 img {
+  height: calc(50% - 1px);
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pictures .col-2 img:first-child {
+  margin-bottom: 2px;
 }
 
-.pictures img {
-  margin: 1px;
-}
-
-/*------Breacrumb------*/
+/*------BREADCRUMB------*/
 
 .breadcrumb {
   display: flex;
@@ -143,7 +185,7 @@ MAIN
   margin-top: 20px;
 }
 
-/*------Travel------*/
+/*------TRAVEL------*/
 
 .travel {
   display: flex;
@@ -152,43 +194,54 @@ MAIN
 }
 /*------Travel > Infos------*/
 .infos {
-  /* background-color: pink; */
   padding-right: 200px;
 }
 
 .infos p {
-  font-family: "TripAdvisor_Regular";
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 23px;
 }
 
 /*------Travel > organization------*/
 .organization {
-  background-color: #fe5d5d;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 /*--Haut du bloc organization--*/
 
 .top-orga {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--rose-trip);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .top-orga p {
   font-weight: 100;
 }
-
-.bt-create {
+.top-orga button {
   color: #fff;
   background-color: #000;
   border-radius: 22px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
   margin-top: 30px;
   height: 55px;
   width: 150px;
   text-align: center;
   line-height: 55px;
+}
+
+.top-orga button:hover {
+  background-color: var(--dark-grey-trip);
 }
 
 /*--Carte en dessous--*/
@@ -200,4 +253,130 @@ MAIN
   border-bottom-right-radius: 20px;
   background-image: url(../img/image_trips_card_medium.png);
   background-size: cover;
+  background-position: center;
+}
+
+/*------SECTION LES IMMANQUABLES------*/
+
+/*--texte intro--*/
+
+.immanquables {
+  height: 315px;
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.immanquables .col-1 {
+  flex: 1;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+.immanquables .col-1 p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.immanquables .col-1 a {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+.immanquables .col-1 a:hover {
+  text-decoration: underline;
+}
+
+/*--Carousel--*/
+
+.immanquables .col-2 {
+  flex: 3;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.immanquables .col-2 .point {
+  width: 270px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.immanquables .col-2 .point p {
+  font-size: 14px;
+  line-height: 17px;
+}
+.pic {
+  position: relative;
+
+  height: 200px;
+  width: 270px;
+  margin-bottom: 10px;
+}
+
+.pic img {
+  object-fit: cover;
+  width: 100%;
+}
+.circle {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: 220px;
+  top: 10px;
+}
+.circle:hover {
+  background-color: var(--light-grey-trip);
+  cursor: pointer;
+}
+.picto-trip {
+  position: absolute;
+  width: 30px;
+  top: 160px;
+  left: 10px;
+}
+
+.immanquables .col-2 .point .point-text {
+  padding: 10px;
+}
+.rank {
+  width: 30%;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.immanquables .col-2::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.immanquables .col-2 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/*--------------------------
+FOOTER
+----------------------------*/
+footer {
+  height: 156px;
+  background-color: var(--light-grey-trip);
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+footer p {
+  color: var(--dark-grey-trip);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--rose-trip);
 }

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Trip Sans";
+  font-family: "Trip Sans Reg";
   src: url("../fonts/TripSans-Regular.eot");
   src: url("../fonts/TripSans-Regular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/TripSans-Regular.woff2") format("woff2"),
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-  font-family: "Trip Sans";
+  font-family: "Trip Sans Med";
   src: url("../fonts/TripSans-Medium.eot");
   src: url("../fonts/TripSans-Medium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/TripSans-Medium.woff2") format("woff2"),
@@ -20,32 +20,6 @@
     url("../fonts/TripSans-Medium.ttf") format("truetype"),
     url("../fonts/TripSans-Medium.svg#TripSans-Medium") format("svg");
   font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bw Modelica";
-  src: url("../fonts/BwModelica-Regular.eot");
-  src: url("../fonts/BwModelica-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/BwModelica-Regular.woff2") format("woff2"),
-    url("../fonts/BwModelica-Regular.woff") format("woff"),
-    url("../fonts/BwModelica-Regular.ttf") format("truetype"),
-    url("../fonts/BwModelica-Regular.svg#BwModelica-Regular") format("svg");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Bw Modelica";
-  src: url("../fonts/BwModelica-Bold.eot");
-  src: url("../fonts/BwModelica-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/BwModelica-Bold.woff2") format("woff2"),
-    url("../fonts/BwModelica-Bold.woff") format("woff"),
-    url("../fonts/BwModelica-Bold.ttf") format("truetype"),
-    url("../fonts/BwModelica-Bold.svg#BwModelica-Bold") format("svg");
-  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
