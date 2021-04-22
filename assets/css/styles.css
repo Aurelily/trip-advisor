@@ -21,16 +21,20 @@ body {
   margin: auto;
   /* border: 1px solid red; */
 }
+h1,
+h2,
+h4,
+h5 {
+  font-family: "Trip Sans Med";
+}
 
 h1 {
-  font-family: "Trip Sans Med";
   font-weight: 500;
   font-size: 54px;
   margin-top: 20px;
 }
 
 h2 {
-  font-family: "Trip Sans Med";
   font-size: 28px;
   margin-bottom: 20px;
   line-height: 33px;
@@ -43,14 +47,12 @@ h3 {
 }
 
 h4 {
-  font-family: "Trip Sans Med";
   font-size: 24px;
   margin-bottom: 20px;
   margin-top: 20px;
   line-height: 28px;
 }
 h5 {
-  font-family: "Trip Sans Med";
   font-size: 18px;
   line-height: 22px;
 }
@@ -89,6 +91,8 @@ header img {
   width: 183px;
 }
 
+/*------NAV HEADER-----*/
+
 header nav {
   display: flex;
   justify-content: space-evenly;
@@ -102,6 +106,9 @@ header nav a {
   padding: 12px;
   text-decoration: none;
   color: inherit;
+}
+header nav a span {
+  display: inline;
 }
 
 header nav a:hover {
@@ -192,7 +199,7 @@ MAIN
 .breadcrumb {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 20px;
 }
 
@@ -202,29 +209,31 @@ MAIN
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
-/*------Travel > Infos------*/
-.infos {
-  padding-right: 200px;
+/*------Travel > col-1------*/
+.col-1 {
+  width: 50%;
+  height: 100%;
 }
 
-.infos p {
+.col-1 p {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   line-height: 23px;
 }
 
-/*------Travel > organization------*/
-.organization {
-  border-radius: 20px;
+/*------Travel > col-2 ------*/
+.col-2 {
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  width: calc(50% - 100px);
+  height: 100%;
 }
 
-/*--Haut du bloc organization--*/
+/*-- col-2 > top --*/
 
-.top-orga {
+.col-2 .top {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -233,10 +242,10 @@ MAIN
   border-top-right-radius: 20px;
 }
 
-.top-orga p {
+.top p {
   font-weight: 100;
 }
-.top-orga button {
+.top button {
   color: #fff;
   background-color: #000;
   border-radius: 22px;
@@ -251,14 +260,13 @@ MAIN
   line-height: 55px;
 }
 
-.top-orga button:hover {
+.top button:hover {
   background-color: var(--dark-grey-trip);
 }
 
-/*--Carte en dessous--*/
+/*-- col-2  > bottom-*/
 
-.bottom-orga {
-  width: 465px;
+.col-2 .bottom {
   height: 214px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -267,64 +275,51 @@ MAIN
   background-position: center;
 }
 
-/*------SECTION LES IMMANQUABLES------*/
+/*------MUST SEE SECTION------*/
 
-/*--texte intro--*/
+/*-- must-see > col-1 --*/
 
-.immanquables {
-  height: 315px;
+.must-see {
+  height: 340px;
   display: flex;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.immanquables .col-1 {
-  flex: 1;
-  margin-right: 20px;
+.must-see .col-1 {
+  width: 25%;
   padding-right: 20px;
+  box-sizing: border-box;
 }
-.immanquables .col-1 p {
+.must-see .col-1 p {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 18px;
   line-height: 20px;
-  margin-bottom: 20px;
-}
-.immanquables .col-1 a {
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 18px;
-  color: #000;
-}
-.immanquables .col-1 a:hover {
-  text-decoration: underline;
 }
 
-/*--Carousel--*/
+/*-- must-see > col-2 : Carousel--*/
 
-.immanquables .col-2 {
-  flex: 3;
+.must-see .col-2 {
+  width: 75%;
   display: flex;
+  flex-direction: row;
   overflow-x: scroll;
 }
 
-.carousel-arrow-right {
-  background-color: #fff;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-}
-
-.immanquables .col-2 .point {
-  width: 270px;
+.col-carousel {
   height: 100%;
+  width: calc(100% / 3 - (40px / 3));
+  flex-shrink: 0;
+}
+.col-carousel:not(:last-child) {
   margin-right: 20px;
 }
 
-.immanquables .col-2 .point p {
+.col-carousel p {
   font-size: 14px;
   line-height: 17px;
 }
-.pic {
+.col-carousel .picture {
   position: relative;
 
   height: 200px;
@@ -332,7 +327,7 @@ MAIN
   margin-bottom: 10px;
 }
 
-.pic img {
+.picture img {
   object-fit: cover;
   width: 100%;
 }
@@ -355,7 +350,7 @@ MAIN
   left: 10px;
 }
 
-.immanquables .col-2 .point .point-text {
+.must-see .col-2 .col-carousel .point-text {
   padding: 10px;
 }
 .rank {
@@ -363,17 +358,17 @@ MAIN
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.immanquables .col-2::-webkit-scrollbar {
+.must-see .col-2::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.immanquables .col-2 {
+.must-see .col-2 {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-/*------SECTION GUIDE DU VOYAGEUR------*/
+/*------TRAVEL GUIDE SECTION------*/
 
 .guides {
   display: flex;
@@ -441,4 +436,20 @@ footer p {
 footer a {
   text-decoration: none;
   color: var(--rose-trip);
+}
+
+/*--------------------------
+MEDIAS QUERIES
+----------------------------*/
+
+@media (max-width: 1328px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  header nav a span {
+    display: none;
+  }
 }

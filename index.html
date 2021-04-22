@@ -30,9 +30,9 @@
       <div class="container">
         <img src="./assets/img/logo-tripadvisor.svg" alt="Logo Trip Advisor" />
         <nav class="head-menu">
-          <a href=""><i class="fas fa-pen"></i>Avis</a>
-          <a href=""><i class="far fa-bell"></i>Alertes</a>
-          <a href=""><i class="far fa-heart"></i>Favoris</a>
+          <a href="#"><i class="fas fa-pen"></i><span>Avis</span></a>
+          <a href="#"><i class="far fa-bell"></i><span>Alertes</span></a>
+          <a href="#"><i class="far fa-heart"></i><span>Favoris</span></a>
           <button>Connectez-vous</button>
         </nav>
       </div>
@@ -58,8 +58,8 @@
           <div><span>Plus</span><i class="fas fa-ellipsis-h"></i></div>
         </nav>
 
-        <!-- Bloc photos -->
-        <div class="pictures">
+        <!-- Pictures section -->
+        <section class="pictures">
           <div class="col-1">
             <img src="./assets/img/tokyo-1.jpeg" alt="tokyo1" />
           </div>
@@ -67,18 +67,26 @@
             <img src="./assets/img/tokyo-2.jpeg" alt="tokyo2" />
             <img src="./assets/img/tokyo-3.jpeg" alt="tokyo3" />
           </div>
-        </div>
+        </section>
 
-        <!-- Bloc fil d'ariane -->
-        <div class="breadcrumb">
-          <p>Asie > Japon > Kanto > Préfecture de Tokyo > Tokyo</p>
+        <!-- Breadcrumb nav -->
+        <nav class="breadcrumb">
+          <p>
+            <a class="mini-lien" href="#">Asie</a> >
+            <a class="mini-lien" href="#">Japon</a> >
+            <a class="mini-lien" href="#">Kanto</a> >
+            <a class="mini-lien" href="#">Préfecture de Tokyo</a> >
+            <a class="mini-lien" href="#"
+              >Tokyo<i class="fas fa-caret-down"></i
+            ></a>
+          </p>
           <p>Visitez : Tokyo</p>
-        </div>
+        </nav>
 
-        <!-- Bloc Travel -->
-        <div class="travel">
-          <!-- Bloc Infos description -->
-          <div class="infos">
+        <!-- Travel section -->
+        <section class="travel">
+          <!-- Informations block -->
+          <div class="col-1">
             <h2>
               Une ville sans cesse animée et pleine de contrastes saisissants
             </h2>
@@ -96,10 +104,10 @@
             </p>
           </div>
 
-          <!-- Bloc organisation et création de voyage -->
-          <div class="organization">
-            <!-- Haut création -->
-            <div class="top-orga">
+          <!-- Travel creation block -->
+          <div class="col-2">
+            <!-- Top -->
+            <div class="top">
               <h3>Tokyo : commencez à organiser !</h3>
               <p>
                 Créez un voyage pour enregistrer et organiser toutes vos idées
@@ -108,110 +116,30 @@
               <button>Créez un voyage</button>
             </div>
 
-            <!-- Bas carte -->
-            <div class="bottom-orga"></div>
+            <!-- Bottom -->
+            <div class="bottom"></div>
           </div>
-        </div>
+        </section>
 
-        <!-- Section : les immanquables -->
+        <!-- Must-see section -->
         <section>
           <h2>Tokyo : Les immanquables</h2>
-          <!-- Se divertir -->
-          <div class="immanquables">
+          <div class="must-see">
+            <!-- col-1 -->
             <div class="col-1">
               <h4>Se divertir</h4>
               <p>
                 Des lieux à voir, des rues à explorer et des expériences
                 emblématiques à Tokyo.
               </p>
-              <a href="">Tout afficher</a>
+              <a class="mini-lien" href="#">Tout afficher</a>
             </div>
-            <div class="col-2">
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-1.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-2.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Akihabara</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Chiyoda, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-3.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Senso-ji Temple</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Sites religieux</p>
-                  <p>Asakusa, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-1.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Se Reposer -->
-          <div class="immanquables">
-            <div class="col-1">
-              <h4>Se reposer</h4>
-              <p>Un mélange de charme, de symboles et de modernité.</p>
-              <a href="">Tout afficher</a>
-            </div>
+            <!-- col-2 -->
             <div class="col-2">
-              <div class="point">
-                <div class="pic">
+              <!-- col-carousel 01 -->
+              <div class="col-carousel">
+                <div class="picture">
                   <img
                     src="./assets/img/divertir-1.jpg"
                     alt="divertir-tokyo1"
@@ -221,15 +149,14 @@
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
                 </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
+                <h5>Tsukiji Fish maket</h5>
+                <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
+                <p>Monument & Point d'intérêt</p>
+                <p>Tsukiji, Japon</p>
               </div>
-              <div class="point">
-                <div class="pic">
+              <!-- col-carousel 02 -->
+              <div class="col-carousel">
+                <div class="picture">
                   <img
                     src="./assets/img/divertir-2.jpg"
                     alt="divertir-tokyo1"
@@ -239,15 +166,14 @@
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
                 </div>
-                <div class="point-text">
-                  <h5>Akihabara</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Chiyoda, Japon</p>
-                </div>
+                <h5>Akihabara</h5>
+                <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
+                <p>Monument & Point d'intérêt</p>
+                <p>Chiyoda, Japon</p>
               </div>
-              <div class="point">
-                <div class="pic">
+              <!-- col-carousel 03 -->
+              <div class="col-carousel">
+                <div class="picture">
                   <img
                     src="./assets/img/divertir-3.jpg"
                     alt="divertir-tokyo1"
@@ -257,15 +183,14 @@
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
                 </div>
-                <div class="point-text">
-                  <h5>Senso-ji Temple</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Sites religieux</p>
-                  <p>Asakusa, Japon</p>
-                </div>
+                <h5>Senso-ji Temple</h5>
+                <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
+                <p>Sites religieux</p>
+                <p>Asakusa, Japon</p>
               </div>
-              <div class="point">
-                <div class="pic">
+              <!-- col-carousel 04 -->
+              <div class="col-carousel">
+                <div class="picture">
                   <img
                     src="./assets/img/divertir-1.jpg"
                     alt="divertir-tokyo1"
@@ -275,95 +200,10 @@
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
                 </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Se Restaurer -->
-          <div class="immanquables">
-            <div class="col-1">
-              <h4>Se restaurer</h4>
-              <p>Des restaurants et bars typiques, et plus encore à Tokyo.</p>
-              <a href="">Tout afficher</a>
-            </div>
-            <div class="col-2">
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-1.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-2.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Akihabara</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Chiyoda, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-3.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Senso-ji Temple</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Sites religieux</p>
-                  <p>Asakusa, Japon</p>
-                </div>
-              </div>
-              <div class="point">
-                <div class="pic">
-                  <img
-                    src="./assets/img/divertir-1.jpg"
-                    alt="divertir-tokyo1"
-                  />
-                  <div class="circle"><i class="far fa-heart"></i></div>
-                  <div class="picto-trip">
-                    <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
-                  </div>
-                </div>
-                <div class="point-text">
-                  <h5>Tsukiji Fish maket</h5>
-                  <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
-                  <p>Monument & Point d'intérêt</p>
-                  <p>Tsukiji, Japon</p>
-                </div>
+                <h5>Tsukiji Fish maket</h5>
+                <img class="rank" src="./assets/img/rank-ex.png" alt="rank" />
+                <p>Monument & Point d'intérêt</p>
+                <p>Tsukiji, Japon</p>
               </div>
             </div>
           </div>
@@ -383,7 +223,12 @@
                   src="./assets/img/topito-com.jpeg"
                   alt="topito"
                 />
-                <a class="mini-lien" href="">Par Topito</a>
+                <a
+                  class="mini-lien"
+                  href="http://www.topito.com"
+                  target="_blank"
+                  >Par Topito</a
+                >
               </div>
             </div>
             <div>
@@ -396,7 +241,12 @@
                   src="./assets/img/topito-com.jpeg"
                   alt="topito"
                 />
-                <a class="mini-lien" href="">Par Topito</a>
+                <a
+                  class="mini-lien"
+                  href="http://www.topito.com"
+                  target="_blank"
+                  >Par Topito</a
+                >
               </div>
             </div>
             <div>
@@ -409,7 +259,12 @@
                   src="./assets/img/topito-com.jpeg"
                   alt="topito"
                 />
-                <a class="mini-lien" href="">Par Topito</a>
+                <a
+                  class="mini-lien"
+                  href="http://www.topito.com"
+                  target="_blank"
+                  >Par Topito</a
+                >
               </div>
             </div>
           </div>
