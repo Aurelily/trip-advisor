@@ -59,6 +59,17 @@ h1 span {
   color: var(--rose-trip);
 }
 
+.mini-lien {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+.mini-lien:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /*--------------------------
 HEADER
 ----------------------------*/
@@ -296,6 +307,13 @@ MAIN
   overflow-x: scroll;
 }
 
+.carousel-arrow-right {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
 .immanquables .col-2 .point {
   width: 270px;
   height: 100%;
@@ -353,6 +371,50 @@ MAIN
 .immanquables .col-2 {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+/*------SECTION GUIDE DU VOYAGEUR------*/
+
+.guides {
+  display: flex;
+  justify-content: space-between;
+  height: 400;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.guides > div {
+  flex: 1;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.guides div img {
+  height: 283px;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  margin-bottom: 10px;
+}
+
+.guides p {
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 16px;
+}
+
+.guides .byTopito {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.guides .byTopito .logo-topito {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 
 /*--------------------------
