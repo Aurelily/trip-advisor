@@ -16,15 +16,24 @@ body {
   color: black;
 }
 
+.header-hidden {
+  display: none !important;
+}
+.menu-hidden {
+  display: none !important;
+}
+
 .container {
-  width: 1140px;
+  width: 1024px;
   margin: auto;
-  /* border: 1px solid red; */
+  border: 2px solid red;
+  box-sizing: border-box;
 }
 h1,
 h2,
 h4,
-h5 {
+h5,
+.main-menu span {
   font-family: "Trip Sans Med";
 }
 
@@ -95,20 +104,19 @@ header img {
 
 header nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 500px;
 }
 header nav a {
   display: flex;
   justify-content: center;
+  height: 40px;
+  padding: 0 10px;
   border-radius: 22px;
   align-items: center;
-  padding: 12px;
+  margin-right: 10px;
   text-decoration: none;
   color: inherit;
-}
-header nav a span {
-  display: inline;
 }
 
 header nav a:hover {
@@ -141,19 +149,27 @@ MAIN
 
 .main-menu {
   display: flex;
-  height: 80px;
-  padding: 10px 0;
   margin: 20px 0;
 }
 
 .main-menu div {
-  display: flex;
-  justify-content: space-between;
   border-radius: 10px;
   border: 1px solid black;
   flex: 1;
-  margin: 0 5px;
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.main-menu div:not(:last-child) {
+  margin-right: 10px;
+}
+
+.main-menu span {
+  margin-right: 10px;
+  text-overflow: ellipsis;
+  max-width: 80px;
+  overflow: hidden;
 }
 
 .main-menu div:hover {
@@ -172,11 +188,11 @@ MAIN
 .pictures .col-1 {
   height: 100%;
   margin-right: 2px;
-  flex: 1;
+  width: 60%;
 }
 .pictures .col-2 {
   height: 100%;
-  width: 480px;
+  width: 40%;
 }
 
 .pictures .col-1 img {
@@ -321,9 +337,8 @@ MAIN
 }
 .col-carousel .picture {
   position: relative;
-
   height: 200px;
-  width: 270px;
+  width: 250px;
   margin-bottom: 10px;
 }
 
@@ -336,7 +351,7 @@ MAIN
   padding: 10px;
   border-radius: 50%;
   position: absolute;
-  left: 220px;
+  right: 20px;
   top: 10px;
 }
 .circle:hover {
@@ -346,7 +361,7 @@ MAIN
 .picto-trip {
   position: absolute;
   width: 30px;
-  top: 160px;
+  bottom: 20px;
   left: 10px;
 }
 
@@ -442,14 +457,144 @@ footer a {
 MEDIAS QUERIES
 ----------------------------*/
 
+/*------Max 1328 px------*/
+
 @media (max-width: 1328px) {
+  .menu-hidden {
+    display: flex !important;
+  }
+  .main-menu {
+    flex-wrap: wrap;
+  }
+  .main-menu div {
+    min-width: calc(25% - 50px);
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .main-menu div:nth-child(4) {
+    margin-right: 0px;
+  }
+  .pictures {
+    height: 370px;
+  }
 }
+
+/*------Max 1024 px------*/
 
 @media (max-width: 1024px) {
-}
-
-@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
   header nav a span {
     display: none;
   }
+  header nav a {
+    border-radius: 50%;
+    padding: 0px;
+  }
+  header img {
+    width: 130px;
+  }
+  .main-menu {
+    display: inline-flex;
+    flex-wrap: nowrap;
+  }
+  .main-menu div {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .pictures {
+    height: 270px;
+  }
+  .travel {
+    display: flex;
+    flex-direction: column;
+  }
+  .col-1 {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .col-2 .top {
+    padding: 30px;
+    width: 50%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    box-sizing: border-box;
+  }
+  .col-2 .bottom {
+    width: 50%;
+    min-height: 300px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+/*------Max 768 px------*/
+
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  header > div {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-hidden {
+    display: flex !important;
+  }
+  .pictures .col-2 {
+    display: none;
+  }
+  .pictures .col-1 {
+    width: 100%;
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .col-2 .top {
+    padding: 30px;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    box-sizing: border-box;
+  }
+  .col-2 .bottom {
+    width: 100%;
+    min-height: 300px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 0px;
+  }
+  /* .must-see {
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  } */
+
+  /* .must-see .col-1 {
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+  } */
+  /* .must-see .col-2 {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  } */
 }
