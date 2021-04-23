@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/07a204eb32.js"
-      crossorigin="anonymous"
-    ></script>
     <link
       rel="shortcut icon"
       type="image/png"
@@ -21,21 +17,61 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
+    <link rel="stylesheet" href="./assets/css/medias.css" />
+
+    <!-- Import du fichier main.js -->
+    <script src="./assets/js/main.js"></script>
+    <!-- Import de axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Explorez Tokyo 🇯🇵</title>
   </head>
 
   <body>
+    <!-- MODAL CONNEXION -->
+    <div class="modal">
+      <div class="form-container">
+        <div>
+          <i id="btn-close" class="icon-times"></i>
+          <p>Formulaire de contact</p>
+          <form id="contact-form">
+            <input
+              type="text"
+              placeholder="Prénom"
+              id="firstname"
+              name="firstname"
+            />
+            <input
+              type="text"
+              placeholder="Nom"
+              id="lastname"
+              name="lastname"
+            />
+            <input type="email" placeholder="Email" id="email" name="email" />
+            <textarea
+              placeholder="Ecrivez votre message ici."
+              id="message"
+              name="message"
+            ></textarea>
+            <input type="submit" value="Envoyer" />
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- HEADER -->
     <header>
       <div class="container">
-        <a class="header-hidden" chref="#"><i class="fas fa-bars"></i></a>
+        <a class="header-hidden" chref="#"><i class="icon-menu_bars"></i></a>
         <img src="./assets/img/logo-tripadvisor.svg" alt="Logo Trip Advisor" />
-        <a class="header-hidden" chref="#"><i class="fas fa-search"></i></a>
+        <a class="header-hidden" chref="#"><i class="icon-search"></i></a>
         <nav class="head-menu">
-          <a href="#"><i class="fas fa-pen"></i><span>Avis</span></a>
-          <a href="#"><i class="far fa-bell"></i><span>Alertes</span></a>
-          <a href="#"><i class="far fa-heart"></i><span>Favoris</span></a>
-          <button>Connectez-vous</button>
+          <a href="#"><i class="icon-pencil"></i><span>Avis</span></a>
+          <a href="#"
+            ><i class="icon-notification_bell"></i><span>Alertes</span></a
+          >
+          <a href="#"><i class="icon-heart"></i><span>Favoris</span></a>
+          <button id="btn-connect">Connectez-vous</button>
         </nav>
       </div>
     </header>
@@ -47,20 +83,19 @@
 
         <!-- Main menu -->
         <nav class="main-menu">
-          <div><span>Hôtel</span><i class="fas fa-bed"></i></div>
+          <div><span>Hôtel</span><i class="icon-hotels"></i></div>
           <div>
-            <span>Locations de vacances</span><i class="fas fa-key"></i>
+            <span>Locations de vacances</span
+            ><i class="icon-vacation_rentals"></i>
           </div>
-          <div><span>Activités</span><i class="fas fa-hiking"></i></div>
-          <div><span>Restaurants</span><i class="fas fa-utensils"></i></div>
-          <div>
-            <span>Forums de voyage</span><i class="far fa-comments"></i>
-          </div>
-          <div><span>Vols</span><i class="fas fa-plane"></i></div>
+          <div><span>Activités</span><i class="icon-attractions"></i></div>
+          <div><span>Restaurants</span><i class="icon-restaurants"></i></div>
+          <div><span>Forums de voyage</span><i class="icon-forums"></i></div>
+          <div><span>Vols</span><i class="icon-flights"></i></div>
           <div class="menu-hidden">
-            <span>Croisières</span><i class="fas fa-ship"></i>
+            <span>Croisières</span><i class="icon-cruises"></i>
           </div>
-          <div><span>Plus</span><i class="fas fa-ellipsis-h"></i></div>
+          <div><span>Plus</span><i class="icon-more_horizontal"></i></div>
         </nav>
 
         <!-- Pictures section -->
@@ -82,7 +117,7 @@
             <a class="mini-lien" href="#">Kanto</a> >
             <a class="mini-lien" href="#">Préfecture de Tokyo</a> >
             <a class="mini-lien" href="#"
-              >Tokyo<i class="fas fa-caret-down"></i
+              >Tokyo<i class="icon-caret_down"></i
             ></a>
           </p>
           <p>Visitez : Tokyo</p>
@@ -149,7 +184,7 @@
                     src="./assets/img/divertir-1.jpg"
                     alt="divertir-tokyo1"
                   />
-                  <div class="circle"><i class="far fa-heart"></i></div>
+                  <div class="circle"><i class="icon-heart"></i></div>
                   <div class="picto-trip">
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
@@ -166,7 +201,7 @@
                     src="./assets/img/divertir-2.jpg"
                     alt="divertir-tokyo1"
                   />
-                  <div class="circle"><i class="far fa-heart"></i></div>
+                  <div class="circle"><i class="icon-heart"></i></div>
                   <div class="picto-trip">
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
@@ -183,7 +218,7 @@
                     src="./assets/img/divertir-3.jpg"
                     alt="divertir-tokyo1"
                   />
-                  <div class="circle"><i class="far fa-heart"></i></div>
+                  <div class="circle"><i class="icon-heart"></i></div>
                   <div class="picto-trip">
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
@@ -200,7 +235,7 @@
                     src="./assets/img/divertir-1.jpg"
                     alt="divertir-tokyo1"
                   />
-                  <div class="circle"><i class="far fa-heart"></i></div>
+                  <div class="circle"><i class="icon-heart"></i></div>
                   <div class="picto-trip">
                     <img src="./assets/img/mini-logo.svg" alt="picto-trip" />
                   </div>
