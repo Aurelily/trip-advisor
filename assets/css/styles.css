@@ -499,19 +499,24 @@ MODAL CONNECT FORM
   padding: 40px 20px;
   position: relative;
 }
-.form-container > div p,
-i {
+.form-container > div p {
   font-size: 24px;
   margin-bottom: 30px;
 }
 .form-container > div i {
   position: absolute;
+  font-size: 30px;
   top: 20px;
   right: 20px;
 }
 .form-container > div i:hover {
   color: var(--rose-trip);
   cursor: pointer;
+}
+
+.thanks {
+  display: none;
+  color: var(--rose-trip);
 }
 
 /*-- Formulaire--*/
