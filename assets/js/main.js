@@ -39,7 +39,7 @@ $.addEventListener("DOMContentLoaded", () => {
     console.log(data);
 
     const response = await axios.post(
-      "https://form-trip-advisor-api-lily.herokuapp.com/",
+      "https://form-trip-advisor-api-lily.herokuapp.com/form",
       data
     );
 

@@ -103,6 +103,14 @@ MEDIAS QUERIES
   .header-hidden {
     display: flex !important;
   }
+  .pictures {
+    margin: 0 -30px;
+  }
+  .pictures .col-1 {
+    height: 100%;
+    margin-right: 0px;
+    width: 100%;
+  }
   .pictures .col-2 {
     display: none;
   }
@@ -162,8 +170,15 @@ MEDIAS QUERIES
     margin-bottom: 10px;
   }
 
-  .picture img {
+  .col-carousel .picture img {
     object-fit: cover;
     width: 100%;
+  }
+  .guides div img {
+    height: 435px;
+    width: 580px;
+    object-fit: cover;
+    object-position: bottom;
+    margin-bottom: 10px;
   }
 }

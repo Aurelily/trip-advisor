@@ -5,7 +5,7 @@ ROOT : charte graphique couleurs
   --rose-trip: #fe5d5d;
   --dark-grey-trip: #534b4b;
   --light-grey-trip: #f2f2f2;
-  --vert-trip: #35e0a1;
+  --vert-trip: #07a96c;
 }
 
 /*--------------------------
@@ -351,12 +351,16 @@ MAIN
 }
 .col-carousel .picture {
   position: relative;
-  height: 200px;
-  width: 250px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-.picture img {
+.col-carousel .ranking {
+  color: var(--vert-trip);
+  display: flex;
+}
+
+.col-carousel .picture img {
   object-fit: cover;
   width: 100%;
 }
@@ -409,10 +413,12 @@ MAIN
 
 .guides > div {
   flex: 1;
-  margin: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.guides > div:not(:last-child) {
+  margin-right: 8px;
 }
 
 .guides div img {
@@ -468,7 +474,7 @@ footer a {
 }
 
 /*--------------------------
-MODAL CONNECT FORM
+MODAL CONTACT FORM
 ----------------------------*/
 .modal {
   display: none;
@@ -491,7 +497,7 @@ MODAL CONNECT FORM
   width: 40vw;
 }
 
-/*-- Div blanc contenant formulaire--*/
+/*-- White div with contact form--*/
 .form-container > div {
   display: flex;
   flex-direction: column;
@@ -523,7 +529,7 @@ MODAL CONNECT FORM
   cursor: pointer;
 }
 
-/*-- Formulaire--*/
+/*-- Contact form--*/
 
 #contact-form {
   display: flex;
@@ -575,7 +581,7 @@ form button:hover {
 }
 
 input:invalid {
-  border: 2px dashed var(--rose-trip);
+  border: 2px solid var(--rose-trip);
 }
 
 input:valid {
