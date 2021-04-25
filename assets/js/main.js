@@ -1,42 +1,59 @@
 const $ = document;
 
 $.addEventListener("DOMContentLoaded", () => {
-  console.log("page chargée");
+  console.log("document chargée");
+
+  //mes éléments sous forme de variable
+  const btContact = $.querySelector("#btn-contact");
+  const btClose = $.querySelector("#btn-close");
+  const contactForm = $.querySelector("#contact-form");
+  const btSend = $.querySelector("#btn-send");
+  const msgInfos = $.querySelector("#msg-infos");
 
   // Bouton connectez-vous : affiche formulaire de contact modal
 
-  $.querySelector("#btn-connect").addEventListener("click", () => {
+  btContact.addEventListener("click", () => {
     $.querySelector(".modal").classList.add("display");
   });
 
   // Bouton croix : ferme le formulaire modal
 
-  $.querySelector("#btn-close").addEventListener("click", () => {
+  btClose.addEventListener("click", () => {
     $.querySelector(".modal").classList.remove("display");
   });
 
   // Bouton Envoyer les données du formulaire
 
-  $.querySelector("#contact-form").addEventListener("submit", async (event) => {
-    // event.preventDefault();
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    btSend.setAttribute("disabled", "disabled");
+    btSend.classList.add("btn-disabled");
 
-    if (firstname && lastname && email && message) {
-      const data = {
-        firstname: $.querySelector("#firstname").value,
-        lastname: $.querySelector("#lastname").value,
-        email: $.querySelector("#email").value,
-        message: $.querySelector("#message").value,
-      };
+    const data = {
+      firstname: $.querySelector("#firstname").value,
+      lastname: $.querySelector("#lastname").value,
+      email: $.querySelector("#email").value,
+      message: $.querySelector("#message").value,
+    };
 
-      console.log(data);
+    console.log(data);
 
-      const response = await axios.post("http://localhost:3000/form", data);
+    const response = await axios.post(
+      "https://form-trip-advisor-api-lily.herokuapp.com/",
+      data
+    );
 
-      console.log(response);
+    console.log(response);
 
-      alert("Merci pour votre message");
+    if (response.status !== 200) {
+      alert("Le formulaire n'a pu être envoyé");
+      btSend.removeAttribute("disabled");
+      btSend.classList.remove("btn-disabled");
     } else {
-      alert("Vous devez remplir tous les champs");
+      btSend.removeAttribute("disabled");
+      btSend.classList.remove("btn-disabled");
+      msgInfos.classList.remove("msg-hidden");
+      contactForm.reset();
     }
   });
 });

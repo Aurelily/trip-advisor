@@ -19,10 +19,11 @@
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <link rel="stylesheet" href="./assets/css/medias.css" />
 
+    <!-- Import de axios avant MAIN.JS-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <!-- Import du fichier main.js -->
     <script src="./assets/js/main.js"></script>
-    <!-- Import de axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Explorez Tokyo 🇯🇵</title>
   </head>
@@ -35,27 +36,36 @@
         <div>
           <i id="btn-close" class="icon-times"></i>
           <p>Formulaire de contact</p>
-          <p class="thanks">Merci pour votre message !</p>
+          <p id="msg-infos" class="msg-hidden">Merci pour votre message !</p>
           <form id="contact-form">
             <input
               type="text"
               placeholder="Prénom"
               id="firstname"
               name="firstname"
+              required
             />
             <input
               type="text"
               placeholder="Nom"
               id="lastname"
               name="lastname"
+              required
             />
-            <input type="email" placeholder="Email" id="email" name="email" />
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              required
+            />
             <textarea
               placeholder="Ecrivez votre message ici."
               id="message"
               name="message"
+              required
             ></textarea>
-            <input class="btn-send" type="submit" value="Envoyer" />
+            <button id="btn-send">Envoyer</button>
           </form>
         </div>
       </div>
@@ -73,7 +83,7 @@
             ><i class="icon-notification_bell"></i><span>Alertes</span></a
           >
           <a href="#"><i class="icon-heart"></i><span>Favoris</span></a>
-          <button id="btn-connect">Connectez-vous</button>
+          <button id="btn-contact">Contactez-nous</button>
         </nav>
       </div>
     </header>

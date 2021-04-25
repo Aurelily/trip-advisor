@@ -11,9 +11,13 @@ ROOT : charte graphique couleurs
 /*--------------------------
 GLOBAL
 ----------------------------*/
-
+/*---- les padding, borders...sont pris en compte dans les tailles définie de chaque sélecteur ----*/
 * {
   box-sizing: border-box;
+}
+/*---- Enlève le cadre focus par défaut des textareas ----*/
+*:focus {
+  outline: none;
 }
 
 .display {
@@ -503,6 +507,11 @@ MODAL CONNECT FORM
   font-size: 24px;
   margin-bottom: 30px;
 }
+.form-container > div #msg-infos {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: var(--rose-trip);
+}
 .form-container > div i {
   position: absolute;
   font-size: 30px;
@@ -512,11 +521,6 @@ MODAL CONNECT FORM
 .form-container > div i:hover {
   color: var(--rose-trip);
   cursor: pointer;
-}
-
-.thanks {
-  display: none;
-  color: var(--rose-trip);
 }
 
 /*-- Formulaire--*/
@@ -529,7 +533,8 @@ MODAL CONNECT FORM
   width: 60%;
 }
 
-form input {
+form input,
+form button {
   width: 100%;
   outline: none;
   border: solid 2px var(--rose-trip);
@@ -544,14 +549,35 @@ form textarea {
   font-family: inherit;
   font-size: inherit;
   border: solid 2px var(--rose-trip);
+  resize: none;
 }
-form input[type="submit"] {
+form textarea:focus {
+  border: solid 2px var(--vert-trip);
+}
+form button {
   background-color: var(--rose-trip);
   color: white;
   font-weight: bold;
 }
 
-form input[type="submit"]:hover {
+form button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.btn-disabled {
+  background-color: var(--light-grey-trip);
+  border: 0px;
+}
+
+.msg-hidden {
+  display: none !important;
+}
+
+input:invalid {
+  border: 2px dashed var(--rose-trip);
+}
+
+input:valid {
+  border: solid 2px var(--rose-trip);
 }
