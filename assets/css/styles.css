@@ -4,7 +4,7 @@ ROOT : charte graphique couleurs
 :root {
   --rose-trip: #fe5d5d;
   --dark-grey-trip: #534b4b;
-  --light-grey-trip: #f2f2f2;
+  --light-grey-trip: #e0e0e0;
   --vert-trip: #07a96c;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-  width: 1024px;
+  width: 1184px;
   margin: auto;
   /* border: 2px solid red; */
   box-sizing: border-box;
@@ -108,6 +108,21 @@ header > div {
 }
 header img {
   width: 183px;
+}
+header form {
+  position: relative;
+  display: block;
+}
+header form i {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+header form input {
+  width: 340px;
+  height: 40px;
+  border: solid 2px var(--light-grey-trip) !important;
+  border-radius: 10px;
 }
 
 /*------NAV HEADER-----*/

@@ -41,6 +41,7 @@ MEDIAS QUERIES
   header img {
     width: 130px;
   }
+
   .main-menu {
     display: inline-flex;
     flex-wrap: nowrap;
@@ -102,6 +103,9 @@ MEDIAS QUERIES
   }
   .header-hidden {
     display: flex !important;
+  }
+  header form {
+    display: none;
   }
   .pictures {
     margin: 0 -30px;
